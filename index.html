@@ -7,7 +7,45 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Modal de Registro -->
+  <div class="modal" id="loginModal">
+    <div class="modal-content">
+      <h2>👤 Bienvenido</h2>
+      <form id="loginForm">
+        <div class="form-group">
+          <input type="text" id="username" placeholder="Tu nombre" required />
+        </div>
+        <button type="submit" class="btn btn-primary">Iniciar Juego</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal para seleccionar modo de juego -->
+  <div class="modal" id="modeModal">
+    <div class="modal-content">
+      <h2>¿Cómo deseas jugar?</h2>
+      <div class="mode-buttons">
+        <button class="btn btn-mode" id="btn-two-players">
+          <div class="mode-icon">👥</div>
+          <div class="mode-title">2 Jugadores</div>
+          <div class="mode-desc">Juega con un amigo</div>
+        </button>
+        <button class="btn btn-mode" id="btn-vs-ai">
+          <div class="mode-icon">🤖</div>
+          <div class="mode-title">vs IA</div>
+          <div class="mode-desc">Juega contra la computadora</div>
+        </button>
+      </div>
+    </div>
+  </div>
+
   <div class="game-wrap">
+
+    <div class="header-bar">
+      <div class="player-name" id="playerName">Jugador</div>
+      <button class="btn btn-small" id="btn-change-mode">Cambiar Modo</button>
+      <button class="btn btn-small" id="btn-logout">Salir</button>
+    </div>
 
     <div class="score-board">
       <div class="score-card" id="card-x">
