@@ -109,7 +109,6 @@ function logout() {
       cell.textContent = '';
       cell.classList.remove('taken', 'x-cell', 'o-cell', 'winner-cell');
     });
-    hideAllModals();
   }
 }
 
