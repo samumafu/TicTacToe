@@ -1,0 +1,104 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: sans-serif;
+  background: #f5f5f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.game-wrap {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.score-board {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.score-card {
+  background: #f5f5f0;
+  border-radius: 10px;
+  padding: 12px;
+  text-align: center;
+  border: 2px solid transparent;
+  transition: border 0.2s;
+}
+
+.score-card.active { border-color: #378ADD; }
+
+.score-label { font-size: 12px; color: #888; margin-bottom: 2px; }
+.score-name  { font-size: 15px; font-weight: 500; }
+.score-num   { font-size: 28px; font-weight: 500; }
+.score-x     { color: #185FA5; }
+.score-o     { color: #993C1D; }
+.vs-label    { font-size: 13px; color: #aaa; text-align: center; }
+
+.status-bar {
+  text-align: center;
+  font-size: 15px;
+  color: #555;
+  min-height: 24px;
+  margin-bottom: 1rem;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 1.2rem;
+}
+
+.cell {
+  aspect-ratio: 1;
+  background: #f5f5f0;
+  border: 1px solid #e0e0d8;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 44px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s;
+  user-select: none;
+}
+
+.cell:hover:not(.taken) { background: #eaeae4; }
+.cell.taken { cursor: default; }
+.cell.x-cell { color: #185FA5; }
+.cell.o-cell { color: #993C1D; }
+.cell.winner-cell { background: #ddeeff; border-color: #378ADD; }
+
+.actions { display: flex; gap: 8px; }
+
+.btn {
+  flex: 1;
+  padding: 10px 0;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background: transparent;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn:hover { background: #f0f0ec; }
+
+.btn-primary {
+  background: #185FA5;
+  color: white;
+  border-color: #185FA5;
+}
+
+.btn-primary:hover { background: #0d4a85; }
