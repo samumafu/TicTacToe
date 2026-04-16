@@ -333,8 +333,8 @@ function evaluateBoard(state) {
       (state[b] === 'O' ? 1 : state[b] === 'X' ? -1 : 0) +
       (state[c] === 'O' ? 1 : state[c] === 'X' ? -1 : 0);
 
-    if (sum === 3) return 10; // IA ganó
-    if (sum === -3) return -10; // Jugador ganó
+    if (sum === 3) return 10; 
+    if (sum === -3) return -10; 
   }
   return 0; // Neutral
 }
